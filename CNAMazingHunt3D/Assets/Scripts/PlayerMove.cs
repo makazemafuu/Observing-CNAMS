@@ -9,6 +9,7 @@ public class PlayerMove : MonoBehaviour
     public float speed = 5.0f;
     public float jumpForce = 5.0f;
     public bool isOnGround = true;
+    public bool isOnTerrain = false;
     private float motionUpDown;
     private float motionLeftRight;
     private Rigidbody playerRb;
@@ -43,7 +44,13 @@ public class PlayerMove : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
+            Debug.Log("Player is on the ground !");
             isOnGround = true;
+        }
+        if(collision.gameObject.tag == "Terrain")
+        {
+            Debug.Log("Player is on the terrain !");
+            isOnTerrain = true;
         }
     }
 
