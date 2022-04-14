@@ -14,6 +14,9 @@ public class CameraFollow : MonoBehaviour
     //Smooth factor, it'll use in Camera position
     public float smoothFactor = 0.5f;
 
+    //Will check that the camera looked at on the target or not
+    public bool lookAtTarget = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,5 +27,11 @@ public class CameraFollow : MonoBehaviour
     {
         Vector3 newPosition = targetObject.transform.position + cameraOffset;
         transform.position = Vector3.Slerp(transform.position, newPosition, smoothFactor);
+
+        //Camera Rotation Change
+        if (lookAtTarget)
+        {
+            transform.LookAt(targetObject);
+        }
     }
 }
