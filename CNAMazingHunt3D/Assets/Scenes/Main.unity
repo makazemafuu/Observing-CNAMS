@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76122739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -232, z: 0}
+  m_LocalPosition: {x: 0, y: -211, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1407957178}
@@ -659,13 +659,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.46891102, y: -0, z: -0, w: 0.88324535}
-  m_LocalPosition: {x: 487, y: 167.36, z: 310.68}
+  m_LocalRotation: {x: 0.4415655, y: -0, z: -0, w: 0.897229}
+  m_LocalPosition: {x: 487, y: 167.47, z: 310.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 55.927, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 52.408, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -883,6 +883,7 @@ GameObject:
   - component: {fileID: 1407957178}
   - component: {fileID: 1407957180}
   - component: {fileID: 1407957179}
+  - component: {fileID: 1407957181}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Terrain
@@ -948,6 +949,19 @@ Terrain:
   m_GroupingID: 0
   m_RenderingLayerMask: 1
   m_AllowAutoConnect: 1
+--- !u!65 &1407957181
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407957177}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1508731806
 GameObject:
   m_ObjectHideFlags: 0
