@@ -24,12 +24,12 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         //get player input
-        motionUpDown = Input.GetAxis("Horizontal");
-        motionLeftRight = Input.GetAxis("Vertical");
+        motionLeftRight = Input.GetAxis("Horizontal");
+        motionUpDown = Input.GetAxis("Vertical");
         
         //move the player forward
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * motionLeftRight);
-        transform.Translate(Vector3.right * Time.deltaTime * speed * motionUpDown);
+        transform.Translate(Vector3.forward * Time.deltaTime * speed * motionUpDown);
+        transform.Translate(Vector3.right * Time.deltaTime * speed * motionLeftRight);
 
         //let the player jump
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
