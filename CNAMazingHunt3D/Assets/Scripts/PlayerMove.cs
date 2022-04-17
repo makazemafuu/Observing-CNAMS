@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
@@ -26,7 +23,7 @@ public class PlayerMove : MonoBehaviour
         //get player input
         motionLeftRight = Input.GetAxis("Horizontal");
         motionUpDown = Input.GetAxis("Vertical");
-        
+
         //move the player forward
         transform.Translate(Vector3.forward * Time.deltaTime * speed * motionUpDown);
         transform.Translate(Vector3.right * Time.deltaTime * speed * motionLeftRight);
@@ -40,6 +37,7 @@ public class PlayerMove : MonoBehaviour
 
     }
 
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
@@ -47,11 +45,13 @@ public class PlayerMove : MonoBehaviour
             Debug.Log("Player is on the ground !");
             isOnGround = true;
         }
-        if(collision.gameObject.tag == "Terrain")
+        if (collision.gameObject.tag == "Terrain")
         {
             Debug.Log("Player is on the terrain !");
             isOnTerrain = true;
         }
     }
+
+
 
 }
