@@ -8,11 +8,13 @@ public class TerrainOnCollision : MonoBehaviour
     private Transform target;
 
     [SerializeField] GameObject PlayerMovement;
+    [SerializeField] GameObject UI;
 
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        UI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,6 +28,7 @@ public class TerrainOnCollision : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.SetActive(false);
+            UI.SetActive(true);
         }
 
     }
