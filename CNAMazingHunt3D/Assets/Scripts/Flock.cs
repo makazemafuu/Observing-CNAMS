@@ -51,14 +51,15 @@ public class Flock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         foreach (FlockAgent agent in agents)
         {
             List<Transform> context = GetNearbyObjects(agent); // What things exist in our context, in our neighbor radius ?
+
             
-            //FOR DEMO ONLY
+            //FOR DEMO ONLY - THE SpriteRenderer isn't working for now.
             agent.GetComponentInChildren<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, context.Count / 6f);
 
-            /*c
             Vector3 move = behavior.CalculateMove(agent, context, this);
             move *= driveFactor;
             if (move.sqrMagnitude > squareMaxSpeed)
@@ -66,9 +67,9 @@ public class Flock : MonoBehaviour
                 move = move.normalized * maxSpeed;
             }
             agent.Move(move);
-            c*/
 
         }
+        */
     }
 
     List<Transform> GetNearbyObjects(FlockAgent agent)
