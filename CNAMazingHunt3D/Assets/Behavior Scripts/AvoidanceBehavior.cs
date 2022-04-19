@@ -2,17 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AvoidanceBehavior : MonoBehaviour
+[CreateAssetMenu(menuName = "Flock/Behavior/Avoidance")]
+public class AvoidanceBehavior : FlockBehavior
 {
-    // Start is called before the first frame update
-    void Start()
+    public override Vector3 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock)
     {
-        
-    }
+        // If not neighbors, return no adjustment
+        if (context.Count == 0)
+            return Vector3.zero;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Add all points together and average
+        Vector3 avoidanceMove = Vector3.zero;
+        int nAvoid = 0;
+
+        foreach (Transform item in context)
+        {
+            if (Vector3.SqrMagnitude(item.position - agent.transform.position) < flock.SquareAvoidanceRadius)
+            {
+                nAvoid++;
+                avoidanceMove += (Vector3)(agent.transform.position - item.position); 
+            }
+            avoidanceMove += (Vector3)item.position;
+        }
+        if (nAvoid > 0)
+        {
+            avoidanceMove /= nAvoid;
+        }
+        return avoidanceMove;
     }
 }
