@@ -56,10 +56,6 @@ public class Flock : MonoBehaviour
         {
             List<Transform> context = GetNearbyObjects(agent); // What things exist in our context, in our neighbor radius ?
 
-            
-            /* FOR DEMO ONLY - THE SpriteRenderer isn't working for now.
-            agent.GetComponentInChildren<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, context.Count / 6f); */
-
             Vector3 move = behavior.CalculateMove(agent, context, this);
             move *= driveFactor;
             if (move.sqrMagnitude > squareMaxSpeed)
