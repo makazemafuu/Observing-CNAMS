@@ -60,7 +60,7 @@ public class Flock : MonoBehaviour
             /* FOR DEMO ONLY - THE SpriteRenderer isn't working for now.
             agent.GetComponentInChildren<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, context.Count / 6f); */
 
-             Vector3 move = behavior.CalculateMove(agent, context, this);
+            Vector3 move = behavior.CalculateMove(agent, context, this);
             move *= driveFactor;
             if (move.sqrMagnitude > squareMaxSpeed)
             {
