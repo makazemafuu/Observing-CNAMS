@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10c46e69b63121b4e940581c5843edad, type: 3}
   m_Name: Default Flock Behavior
   m_EditorClassIdentifier: 
-  behaviors: []
-  weights: []
+  behaviors:
+  - {fileID: 11400000, guid: 4a53a526b8bbb7f4c810460a09c6869c, type: 2}
+  - {fileID: 11400000, guid: 5341ee395079a034a8c9d943fac28429, type: 2}
+  - {fileID: 11400000, guid: 529512305faa4134b917dd9c5b606a17, type: 2}
+  weights:
+  - 4
+  - 1
+  - 2
