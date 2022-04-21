@@ -101,10 +101,11 @@ MonoBehaviour:
   forceAlignement: 3
   forceAttraction: 20
   target: {x: 0, y: 0, z: 0}
-  forceTarget: 15
+  forceTarget: 9
   goToTarget: 0
   velocity: {x: 0, y: 0, z: 0}
   maxSpeed: 20
   minSpeed: 10
   drawGizmos: 1
   drawLines: 1
+  player: {fileID: 0}

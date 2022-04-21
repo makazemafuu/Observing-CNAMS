@@ -30,6 +30,8 @@ public class BoidManager : MonoBehaviour
     private float timerRetargetBoids = 0;
     private bool setTargetToBoids = true;
 
+    public GameObject target;
+
     private List<Boid> boids = new List<Boid>();
     public ReadOnlyCollection<Boid> roBoids
     {
@@ -41,8 +43,9 @@ public class BoidManager : MonoBehaviour
         for (int i = 0; i < nbBoids; i++)
         {
             Boid b = GameObject.Instantiate<Boid>(prefabBoid);
-            Vector3 positionBoid = Random.insideUnitSphere * startSpread;
+            Vector3 positionBoid = Random.insideUnitSphere * startSpread + transform.position;
             positionBoid.y = Mathf.Abs(positionBoid.y); //Ne pas créer des oiseaux sous 0, on imagine que ce sera le sol.
+            b.player = target;
             b.transform.position = positionBoid;
             b.velocity = (positionBoid - transform.position).normalized * startSpeed;
             b.transform.parent = this.transform;

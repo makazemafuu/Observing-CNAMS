@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-   public void Restart()
+    public void Restart()
     {
         Debug.Log("Restart the game !");
         SceneManager.LoadScene(0);

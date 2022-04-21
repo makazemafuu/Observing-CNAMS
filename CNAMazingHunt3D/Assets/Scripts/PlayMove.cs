@@ -14,14 +14,12 @@ public class PlayMove : MonoBehaviour
     private Rigidbody playerRb;
 
     [SerializeField] GameObject UI;
-    [SerializeField] GameObject StartCanvas;
 
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
         UI.SetActive(false);
-        StartCanvas.SetActive(true);
     }
 
     // Update is called once per frame

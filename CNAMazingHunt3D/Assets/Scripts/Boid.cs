@@ -22,6 +22,7 @@ public class Boid : MonoBehaviour
 
     public bool drawGizmos = true;
     public bool drawLines = true;
+    public GameObject player;
 
     // Update is called once per frame
     void Update()
@@ -81,6 +82,8 @@ public class Boid : MonoBehaviour
         //On fait la moyenne des forces, ce qui nous rend indépendant du nombre de boids
         sumForces /= nbForcesApplied;
 
+        target = player.GetComponent<Transform>().position;
+
         //Si on a une target, on l'ajoute
         if (goToTarget)
         {
@@ -122,12 +125,10 @@ public class Boid : MonoBehaviour
         if (drawLines)
             Debug.DrawLine(transform.position, transform.position + velocity, Color.blue);
 
-        //Pour pas que mes boids partent sous mon sol
-        if (velocity.y < 0)
-            velocity.y = 0;
 
         //Deplacement du boid
         transform.position += velocity * Time.deltaTime;
+
     }
 
     void OnDrawGizmosSelected()
