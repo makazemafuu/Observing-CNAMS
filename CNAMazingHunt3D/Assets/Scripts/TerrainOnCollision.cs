@@ -8,7 +8,7 @@ public class TerrainOnCollision : MonoBehaviour
     public float speed;
     private Transform target;
 
-    [SerializeField] GameObject PlayerMovement;
+    [SerializeField] GameObject PlayMove;
     [SerializeField] GameObject UI;
 
     // Start is called before the first frame update
