@@ -26,11 +26,11 @@ public class TerrainOnCollision : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        //if (collision.gameObject.tag == "Player")
-        //{
-        //    collision.gameObject.SetActive(false);
-        //UI.SetActive(true);
-        //}
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.SetActive(false);
+            UI.SetActive(true);
+        }
 
     }
 }
