@@ -4,6 +4,7 @@ public class PlayerMove : MonoBehaviour
 {
 
     public float speed = 5.0f;
+    public float rotationSpeed;
     public float jumpForce = 5.0f;
     public bool isOnGround = true;
     public bool isOnTerrain = false;
@@ -24,9 +25,22 @@ public class PlayerMove : MonoBehaviour
         motionLeftRight = Input.GetAxis("Horizontal");
         motionUpDown = Input.GetAxis("Vertical");
 
+        Vector3 movementDirection = new Vector3(motionLeftRight, 0, motionUpDown);
+        movementDirection.Normalize();
+
         //move the player forward
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * motionUpDown);
-        transform.Translate(Vector3.right * Time.deltaTime * speed * motionLeftRight);
+        transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
+
+        //transform.Translate(Vector3.forward * Time.deltaTime * speed * motionUpDown);
+        //transform.Translate(Vector3.right * Time.deltaTime * speed * motionLeftRight);
+
+        if (movementDirection != Vector3.zero)
+        {
+            Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up); //quaternion is a specific type for storing rotations
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+
+            //transform.forward = movementDirection;
+        }
 
         //let the player jump
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
