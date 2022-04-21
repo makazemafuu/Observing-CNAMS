@@ -173,7 +173,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9057321063949126503, guid: d00dddc0ddeaa72498b9940bb89b3eeb, type: 3}
   m_PrefabInstance: {fileID: 7817311801941052868}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1367492416}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a1bc65e88aad1e499bae2dd16a2254f, type: 3}
@@ -570,7 +570,7 @@ GameObject:
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!135 &746861681
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -804,11 +804,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f24c7587c8a841479c4bcdc4526abd4, type: 3}
+  m_Script: {fileID: 11500000, guid: fd67eb3a249cfb0469dd5d803a209eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedH: 2
-  speedV: 2
+  sensitivity: -1
 --- !u!1001 &989144332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1097,6 +1096,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6301413277178961599, guid: 19586a0b5e0d5434fa190799d1e474dc, type: 3}
   m_PrefabInstance: {fileID: 1183586947}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1367492416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9057321063949126502, guid: d00dddc0ddeaa72498b9940bb89b3eeb, type: 3}
+  m_PrefabInstance: {fileID: 7817311801941052868}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1367492417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367492416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2804aafcda390f43b84b60e06205e82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 746861684}
+  randomTargetDistMin: 2
+  randomTargetDistMax: 10
+  useRandomTarget: 0
+  distStop: 1
+  distSlowDown: 2
+  vitesseMax: 1
+  acceleration: 1
 --- !u!1 &1407957177
 GameObject:
   m_ObjectHideFlags: 0
