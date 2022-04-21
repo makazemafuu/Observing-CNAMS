@@ -7,7 +7,6 @@ public class PlayerMove : MonoBehaviour
     public float rotationSpeed;
     public float jumpForce = 5.0f;
     public bool isOnGround = true;
-    public bool isOnTerrain = false;
     private float motionUpDown;
     private float motionLeftRight;
     private Rigidbody playerRb;
@@ -59,13 +58,5 @@ public class PlayerMove : MonoBehaviour
             Debug.Log("Player is on the ground !");
             isOnGround = true;
         }
-        if (collision.gameObject.tag == "Terrain")
-        {
-            Debug.Log("Player is on the terrain !");
-            isOnTerrain = true;
-        }
     }
-
-
-
 }
