@@ -1,4 +1,4 @@
-/*c
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,14 +24,13 @@ public class TerrainOnCollision : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
 
-    //public void OnCollisionEnter(Collision collision)
-    //{
-    //  if (collision.gameObject.tag == "Player")
-    //{
-    //  collision.gameObject.SetActive(false);
-    //UI.SetActive(true);
-    //}
+    public void OnCollisionEnter(Collision collision)
+    {
+        //if (collision.gameObject.tag == "Player")
+        //{
+        //    collision.gameObject.SetActive(false);
+        //UI.SetActive(true);
+        //}
 
-    //    }
+    }
 }
-*/

@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using UnityEngine;
@@ -42,7 +42,7 @@ public class BoidManager : MonoBehaviour
         {
             Boid b = GameObject.Instantiate<Boid>(prefabBoid);
             Vector3 positionBoid = Random.insideUnitSphere * startSpread;
-            positionBoid.y = Mathf.Abs(positionBoid.y); //Ne pas créer des oiseaux sous 0, on imagine que ce sera le sol.
+            positionBoid.y = Mathf.Abs(positionBoid.y); //Ne pas crÃ©er des oiseaux sous 0, on imagine que ce sera le sol.
             b.transform.position = positionBoid;
             b.velocity = (positionBoid - transform.position).normalized * startSpeed;
             b.transform.parent = this.transform;
@@ -53,7 +53,7 @@ public class BoidManager : MonoBehaviour
 
     void Update()
     {
-        //Décrémente la temporisation
+        //DÃ©crÃ©mente la temporisation
         timerRetargetBoids -= Time.deltaTime;
         if (timerRetargetBoids <= 0)
         {

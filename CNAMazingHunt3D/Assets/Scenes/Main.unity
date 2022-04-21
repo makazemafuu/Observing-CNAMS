@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 76122740}
   - component: {fileID: 76122741}
-  - component: {fileID: 76122742}
   m_Layer: 0
   m_Name: TerrainGroup
   m_TagString: Terrain
@@ -169,21 +168,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &76122742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 76122739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 570dee5e46392354ca95b6e46ac42f7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  PlayerMovement: {fileID: 1508731806}
-  UI: {fileID: 0}
 --- !u!1001 &468419251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1033,7 +1017,6 @@ GameObject:
   - component: {fileID: 1407957180}
   - component: {fileID: 1407957179}
   - component: {fileID: 1407957181}
-  - component: {fileID: 1407957182}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Terrain
@@ -1112,21 +1095,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1407957182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407957177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 570dee5e46392354ca95b6e46ac42f7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  PlayerMovement: {fileID: 1508731806}
-  UI: {fileID: 0}
 --- !u!1001 &1445963360
 PrefabInstance:
   m_ObjectHideFlags: 0

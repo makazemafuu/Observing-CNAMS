@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -47,14 +47,14 @@ public class Boid : MonoBehaviour
                     float distToOtherBoid = vecToOtherBoid.magnitude;
                     float normalizedDistanceToNextZone = ((distToOtherBoid - zoneAlignement) / (zoneAttraction - zoneAlignement));
                     float boostForce = (4 * normalizedDistanceToNextZone);
-                    if (!goToTarget) //Encore plus de cohésion si pas de target
+                    if (!goToTarget) //Encore plus de cohÃ©sion si pas de target
                         boostForce *= boostForce;
                     forceToApply = vecToOtherBoid.normalized * forceAttraction * boostForce;
                     colorDebugForce += Color.green;
                 }
                 else
                 {
-                    //On est dans alignement, mais est on hors de répulsion ?
+                    //On est dans alignement, mais est on hors de rÃ©pulsion ?
                     if (vecToOtherBoid.sqrMagnitude > zoneRepulsion * zoneRepulsion)
                     {
                         //On est dans la zone d'alignement uniquement
@@ -78,7 +78,7 @@ public class Boid : MonoBehaviour
             }
         }
 
-        //On fait la moyenne des forces, ce qui nous rend indépendant du nombre de boids
+        //On fait la moyenne des forces, ce qui nous rend indÃ©pendant du nombre de boids
         sumForces /= nbForcesApplied;
 
         //Si on a une target, on l'ajoute
@@ -134,7 +134,7 @@ public class Boid : MonoBehaviour
     {
         if (drawGizmos)
         {
-            // Répulsion
+            // RÃ©pulsion
             Gizmos.color = new Color(1, 0, 0, 1.0f);
             Gizmos.DrawWireSphere(transform.position, zoneRepulsion);
             // Alignement
