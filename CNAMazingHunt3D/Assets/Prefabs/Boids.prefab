@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9057321063949126491}
   - component: {fileID: 9057321063949126490}
   - component: {fileID: 9057321063949126489}
-  - component: {fileID: 9057321063949126503}
+  - component: {fileID: 6185187312515477912}
   m_Layer: 0
   m_Name: Boids
   m_TagString: Untagged
@@ -82,7 +82,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &9057321063949126503
+--- !u!114 &6185187312515477912
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,21 +91,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 9057321063949126502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1bc65e88aad1e499bae2dd16a2254f, type: 3}
+  m_Script: {fileID: 11500000, guid: 2566d147c8c09214a8f486bda01cb743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoneRepulsion: 5
-  zoneAlignement: 9
-  zoneAttraction: 50
-  forceRepulsion: 15
-  forceAlignement: 3
-  forceAttraction: 20
+  avoidanceZone: 5
+  alignmentZone: 9
+  cohesionZone: 50
+  avoidanceForce: 10
+  alignmentForce: 3
+  cohesionForce: 20
   target: {x: 0, y: 0, z: 0}
-  forceTarget: 9
-  goToTarget: 0
+  targetForce: 9
+  goToTarget: 1
   velocity: {x: 0, y: 0, z: 0}
   maxSpeed: 20
   minSpeed: 10
-  drawGizmos: 1
-  drawLines: 1
+  drawGizmos: 0
+  drawLines: 0
   player: {fileID: 0}
