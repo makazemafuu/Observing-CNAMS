@@ -31,3 +31,6 @@ Merci à vous pour votre travail et votre temps.
 
 Bien à vous,
 Mme Aveillan Diane
+
+--
+Update 2022/05/24 : originally, the demo was a game in which you had to find treasures on the platforms to win and not fall. I didn't have time to finish it and had to learn a lot of things too, so it became a demo. But this is why the original name was CNAMazingHunt / CNAMamazingHunt3D and you can still see it while browsing the files. ^-^
